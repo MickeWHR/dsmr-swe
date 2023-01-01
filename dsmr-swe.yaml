@@ -1,0 +1,160 @@
+---
+substitutions:
+  device_name: dsmr-swe
+
+esphome:
+  name: ${device_name}
+  project:
+    name: mickewhr.dsmr-swe
+    version: "0.3"
+
+esp8266:
+  board: d1_mini
+  framework:
+    version: recommended
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  reboot_timeout: 5min
+  fast_connect: true
+#Add access point if wifi unavailable
+#Aktivera access point om enheten inte kan ansluta till wifi
+  ap: {}
+captive_portal:
+
+# Enable logging by setting baud_rate to same as uart baud rate
+# Aktivera loggning genom att sätta baud_rate till samma som uart baud rate
+logger:
+  level: debug
+  baud_rate: 0
+
+# Enable Home Assistant API, enable password protection
+# Aktivera Home Assistant API, aktivera lösenordsskydd
+api:
+#  password: !secret api_password
+
+# Enable OTA update, enable password protected OTA
+ota:
+#  password: !secret ota_password
+
+web_server:
+  port: 80
+
+uart:
+  baud_rate: 115200
+  rx_pin: D7
+  rx_buffer_size: 1700
+
+dsmr:
+  max_telegram_length: 1700
+
+sensor:
+  - platform: dsmr
+#Delivered from grid, energy/power
+#Uttag av energi/effekt
+    energy_delivered_lux:
+      name: "Mätarställning Aktiv Energi Uttag"
+    power_delivered:
+      name: "Aktiv Effekt Uttag"
+      accuracy_decimals: 3
+    power_delivered_l1:
+      name: "L1 Aktiv Effekt Uttag"
+      accuracy_decimals: 3
+    power_delivered_l2:
+      name: "L2 Aktiv Effekt Uttag"
+      accuracy_decimals: 3
+    power_delivered_l3:
+      name: "L3 Aktiv Effekt Uttag"
+      accuracy_decimals: 3
+
+#Return to grid, energy/power
+#Inmatning av energi/effekt
+    energy_returned_lux:
+      name: "Mätarställning Aktiv Energi Inmatning"
+    power_returned:
+      name: "Aktiv Effekt Inmatning"
+      accuracy_decimals: 3
+    power_returned_l1:
+      name: "L1 Aktiv Effekt Inmatning"
+      accuracy_decimals: 3
+    power_returned_l2:
+      name: "L2 Aktiv Effekt Inmatning"
+      accuracy_decimals: 3
+    power_returned_l3:
+      name: "L3 Aktiv Effekt Inmatning"
+      accuracy_decimals: 3
+
+#Delivered from grid, reactive energy/power
+#Uttag av reaktiv energi/effekt
+#    total_imported_energy:
+#      name: "Mätarställning Reaktiv Energi Uttag"
+#    reactive_power_delivered:
+#      name: "Reaktiv Effekt Uttag"
+#      accuracy_decimals: 3
+#    reactive_power_delivered_l1:
+#      name: "L1 Reaktiv Effekt Uttag"
+#      accuracy_decimals: 3
+#    reactive_power_delivered_l2:
+#      name: "L2 Reaktiv Effekt Uttag"
+#      accuracy_decimals: 3
+#    reactive_power_delivered_l3:
+#      name: "L3 Reaktiv Effekt Uttag"
+#      accuracy_decimals: 3
+
+#Return to grid, reactive energy/power
+#Inmatning av reaktiv energi/effekt
+#    total_exported_energy:
+#      name: "Mätarställning Reaktiv Energi Inmatning"
+#    reactive_power_returned:
+#      name: "Reaktiv Effekt Inmatning"
+#      accuracy_decimals: 3
+#    reactive_power_returned_l1:
+#      name: "L1 Reaktiv Effekt Inmatning"
+#      accuracy_decimals: 3
+#    reactive_power_returned_l2:
+#      name: "L2 Reaktiv Effekt Inmatning"
+#      accuracy_decimals: 3
+#    reactive_power_returned_l3:
+#      name: "L3 Reaktiv Effekt Inmatning"
+#      accuracy_decimals: 3
+
+#Voltage and current
+#Spänning och ström
+    voltage_l1:
+      name: "L1 Fasspänning"
+    voltage_l2:
+      name: "L2 Fasspänning"
+    voltage_l3:
+      name: "L3 Fasspänning"
+    current_l1:
+      name: "L1 Fasström"
+    current_l2:
+      name: "L2 Fasström"
+    current_l3:
+      name: "L3 Fasström"
+
+#Information from the unit
+#Information från enheten
+  - platform: uptime
+    name: "SlimmeLezer Uptime"
+  - platform: wifi_signal
+    name: "SlimmeLezer Wi-Fi Signal"
+    update_interval: 60s
+
+text_sensor:
+  - platform: dsmr
+    identification:
+      name: "DSMR Identification"
+  - platform: wifi_info
+    ip_address:
+      name: "SlimmeLezer IP Address"
+    ssid:
+      name: "SlimmeLezer Wi-Fi SSID"
+    bssid:
+      name: "SlimmeLezer Wi-Fi BSSID"
+  - platform: version
+    name: "ESPHome Version"
+    hide_timestamp: true
+
+...
