@@ -20,8 +20,8 @@ wifi:
   fast_connect: true
 #Add access point if wifi unavailable
 #Aktivera access point om enheten inte kan ansluta till wifi
-  ap: {}
-captive_portal:
+#  ap: {}
+#captive_portal:
 
 # Enable logging by setting baud_rate to same as uart baud rate
 # Aktivera loggning genom att sätta baud_rate till samma som uart baud rate
@@ -70,20 +70,20 @@ sensor:
 
 #Return to grid, energy/power
 #Inmatning av energi/effekt
-    energy_returned_lux:
-      name: "Mätarställning Aktiv Energi Inmatning"
-    power_returned:
-      name: "Aktiv Effekt Inmatning"
-      accuracy_decimals: 3
-    power_returned_l1:
-      name: "L1 Aktiv Effekt Inmatning"
-      accuracy_decimals: 3
-    power_returned_l2:
-      name: "L2 Aktiv Effekt Inmatning"
-      accuracy_decimals: 3
-    power_returned_l3:
-      name: "L3 Aktiv Effekt Inmatning"
-      accuracy_decimals: 3
+#    energy_returned_lux:
+#      name: "Mätarställning Aktiv Energi Inmatning"
+#    power_returned:
+#      name: "Aktiv Effekt Inmatning"
+#      accuracy_decimals: 3
+#    power_returned_l1:
+#      name: "L1 Aktiv Effekt Inmatning"
+#      accuracy_decimals: 3
+#    power_returned_l2:
+#      name: "L2 Aktiv Effekt Inmatning"
+#      accuracy_decimals: 3
+#    power_returned_l3:
+#      name: "L3 Aktiv Effekt Inmatning"
+#      accuracy_decimals: 3
 
 #Delivered from grid, reactive energy/power
 #Uttag av reaktiv energi/effekt
@@ -121,18 +121,18 @@ sensor:
 
 #Voltage and current
 #Spänning och ström
-    voltage_l1:
-      name: "L1 Fasspänning"
-    voltage_l2:
-      name: "L2 Fasspänning"
-    voltage_l3:
-      name: "L3 Fasspänning"
-    current_l1:
-      name: "L1 Fasström"
-    current_l2:
-      name: "L2 Fasström"
-    current_l3:
-      name: "L3 Fasström"
+#    voltage_l1:
+#      name: "L1 Fasspänning"
+#    voltage_l2:
+#      name: "L2 Fasspänning"
+#    voltage_l3:
+#      name: "L3 Fasspänning"
+#    current_l1:
+#      name: "L1 Fasström"
+#    current_l2:
+#      name: "L2 Fasström"
+#    current_l3:
+#      name: "L3 Fasström"
 
 #Information from the unit
 #Information från enheten
