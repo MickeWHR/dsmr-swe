@@ -1,4 +1,4 @@
-# dsmr-swe
+# dsmr-swe - Main
 ESPHome configuration for the built in DSMR Component, Swedish translation
 
 This is my cofiguration file for a wifi-P1/HAN-reader using the built in DSMR-component in ESPHome. 
