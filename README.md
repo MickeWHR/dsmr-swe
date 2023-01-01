@@ -2,7 +2,7 @@
 ESPHome configuration for the built in DSMR Component, Swedish translation
 
 This is my cofiguration file for a wifi-P1/HAN-reader using the built in DSMR-component in ESPHome. 
-There are multiple resources available on GITHub that covers hardware and different approaches. My contribution is sorting out the OBIS-codes used and a Swedish translation of the metering component according to the swedish DLMS protocol.
+There are multiple resources available on GITHub that covers hardware and different approaches. My contribution is sorting out the OBIS-codes used and a Swedish translation of the metering component according to the swedish implementation of the DSMR-standard.
 
 Feel free to reuse the code according to the license!
 
