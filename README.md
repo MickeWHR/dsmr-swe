@@ -24,3 +24,6 @@ Reactive power in/out does not work for my meter. (2022-12-08) I think that the 
 
 This guy has solved everything with his own parser:
 https://github.com/psvanstrom/esphome-p1reader
+
+A LOT of information is available on the official ESPHome site:
+https://esphome.io/
