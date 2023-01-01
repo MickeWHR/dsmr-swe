@@ -15,7 +15,7 @@ Kamstrup Omnipower with the "HAN-P1" module
 Slimmelezer+ by Zuidwijk
 https://github.com/zuidwijk/dsmr
 
-RJ12-extender connector with soldered connection to a 5V USB-cable, provides power to Slimmelezer and P1-module.
+RJ12-extender connector with soldered connection to a 5V USB-cable, provides power to the Slimmelezer and P1-module.
 
 ## Disclaimer
 There is a Light branch that I use since I'm only interested in those sensors.
