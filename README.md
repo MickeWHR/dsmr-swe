@@ -22,6 +22,8 @@ There is a Light branch that I use since I'm only interested in those sensors.
 
 Reactive power in/out does not work for my meter. (2022-12-08) I think that the built in DSMR parser doesn't recognize kVArh/kVAr instead of kvarh/kvar.
 
+I had lots of connectivity issues with my ESP12F - ESP8266 - D1 mini (Slimmelezer) but solved it by setting a static IP in the router and "manual_ip" in esphome.
+
 This guy has solved everything with his own parser:
 https://github.com/psvanstrom/esphome-p1reader
 
