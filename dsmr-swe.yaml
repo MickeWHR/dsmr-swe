@@ -17,20 +17,25 @@ wifi:
   ssid: !secret wifi_ssid
   password: !secret wifi_password
   reboot_timeout: 5min
-  fast_connect: true
+#  fast_connect: true
+  power_save_mode: none
+
+#Enter your own credentials and uncomment
+#  manual_ip:
+#    static_ip: ""
+#    gateway: 192.168.0.1
+#    subnet: 255.255.255.0
+
 #Add access point if wifi unavailable
-#Aktivera access point om enheten inte kan ansluta till wifi
   ap: {}
 captive_portal:
 
 # Enable logging by setting baud_rate to same as uart baud rate
-# Aktivera loggning genom att sätta baud_rate till samma som uart baud rate
 logger:
   level: debug
   baud_rate: 0
 
 # Enable Home Assistant API, enable password protection
-# Aktivera Home Assistant API, aktivera lösenordsskydd
 api:
 #  password: !secret api_password
 
