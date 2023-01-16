@@ -17,7 +17,15 @@ wifi:
   ssid: !secret wifi_ssid
   password: !secret wifi_password
   reboot_timeout: 5min
-  fast_connect: true
+#  fast_connect: true
+  power_save_mode: none
+
+#Enter your own credentials and uncomment
+#  manual_ip:
+#    static_ip: ""
+#    gateway: 192.168.0.1
+#    subnet: 255.255.255.0
+
 #Add access point if wifi unavailable
 #Aktivera access point om enheten inte kan ansluta till wifi
 #  ap: {}
